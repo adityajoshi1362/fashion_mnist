@@ -1,1 +1,2 @@
-# fashion_mnist
+# 🧥 Fashion MNIST Classification with CNN
+
