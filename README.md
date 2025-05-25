@@ -1,16 +1,16 @@
 # 🧥 Fashion MNIST Classification with CNN
+This project showcases a Convolutional Neural Network (CNN) built using TensorFlow and Keras to classify grayscale images from the Fashion MNIST dataset. The dataset consists of 70,000 images across 10 categories of clothing items.
 
-This project demonstrates a convolutional neural network (CNN) built using TensorFlow and Keras to classify images from the Fashion MNIST dataset. The dataset contains grayscale images of 10 different categories of clothing items.
-
-📊 Accuracy Achieved
+🎯 Accuracy Achieved
 ✅ Test Accuracy: ~92%
+
 ✅ Validation Accuracy: Up to 91.8% during training
 
-
 🧠 Model Architecture
-The model is a deep CNN built using keras.Sequential. Below is the architecture:
+A deep CNN was designed using keras.Sequential, composed of multiple convolutional layers, max pooling layers, and fully connected layers with dropout regularization.
 
-model = models.Sequential([
+
+    model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(28, 28, 1)),
     layers.MaxPooling2D((2, 2)),
 
@@ -25,32 +25,28 @@ model = models.Sequential([
     layers.Dropout(0.5),
     layers.Dense(64, activation='relu'),
     layers.Dense(10, activation='softmax')
-])
-
-
-
+    ])
 🧪 Training Summary
-Epochs: 10
+📆 Epochs: 10
 
-Batch Size: 64
+📦 Batch Size: 64
 
-Validation Split: 10%
+📉 Validation Split: 10%
 
-The model was trained on the normalized and reshaped Fashion MNIST data. During training, the model quickly improved to over 90% accuracy within a few epochs.
+The dataset was normalized and reshaped to match the input requirements of the CNN. Training accuracy improved rapidly, surpassing 90% within the first few epochs.
 
+📦 Dataset Details
+The Fashion MNIST dataset contains:
 
-📦 Dataset
+👕 Training Images: 60,000
 
-It contains 70,000 images of clothing items:
+👟 Testing Images: 10,000
 
-Training images: 60,000
+🖼 Image Size: 28x28 pixels (grayscale)
 
-Testing images: 10,000
+🏷️ Number of Classes: 10
 
-Image size: 28x28 pixels (grayscale)
-
-Classes: 10 categories:
-
+👚 Class Labels:
 T-shirt/top
 
 Trouser
@@ -71,29 +67,35 @@ Bag
 
 Ankle boot
 
+🖼 Sample Visualizations
+The project includes code to visualize both:
 
-🖼 Sample Visualization
-The project includes code to visualize training samples and model predictions.
+✅ Training samples with their labels
+
+✅ Model predictions on test images with true vs predicted class names
 
 📌 Requirements
 Python 3.x
 
-TensorFlow >= 2.x
+TensorFlow ≥ 2.x
 
 NumPy
 
 Matplotlib
 
-📬 Future Improvements
-Implement early stopping and learning rate scheduling
+Install via:
 
-Experiment with data augmentation
 
-Add confusion matrix and classification report
+    pip install tensorflow numpy matplotlib
+🚀 Future Improvements
+🔁 Implement early stopping and learning rate decay
 
-Export the model for deployment (e.g., TensorFlow Lite or ONNX)
+🧪 Add a confusion matrix and classification report
+
+🧠 Experiment with data augmentation
+
+📦 Export the model using TensorFlow Lite or ONNX for deployment
 
 👤 Author
 Aditya Joshi
-Feel free to reach out for suggestions, feedback, or collaborations!
-
+📬 Feel free to connect for suggestions, feedback, or collaboration opportunities!
